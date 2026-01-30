@@ -4,9 +4,15 @@ const PORT = process.env.PORT ?? 3000;
 
 const app = express();
 
+app.get('/healthy', (req, res) => {
+    res.send('Server is running healthy!!!!');
+});
+
 app.get('/', (req, res) => {
     res.send('Hello From The Server! level-------1 WOO');
 });
+
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT} V1`);
